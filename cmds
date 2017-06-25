@@ -5,3 +5,9 @@ docker exec -ti abcdexxx ls		# exec cmds
 docker build -t $image_name ./  	#build image
 docker attach abcdexxx 		  	#attach docker
 docker commit $id $image_name	  	#create imaage
+
+docker images 
+docker ps 
+docker ps -a
+docker search xxx
+docker pull ubuntu
