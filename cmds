@@ -1,0 +1,7 @@
+docker run -ti ubuntu            	#run 
+docker run -dti ubuntu  		#run 
+docker run -p 10022:22 -d sshd:ubuntu3 /run.sh  #run with port map
+docker exec -ti abcdexxx ls		# exec cmds
+docker build -t $image_name ./  	#build image
+docker attach abcdexxx 		  	#attach docker
+docker commit $id $image_name	  	#create imaage

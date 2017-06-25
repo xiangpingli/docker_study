@@ -1,0 +1,14 @@
+FROM ubuntu
+
+MAINTAINER lxp "lixiangping@aliyun.com"
+
+RUN touch test.sh 
+RUN echo "#!/bin/sh" > test.sh
+RUN echo "while true;do echo hello >> test.txt;sleep 1;done" >> test.sh
+RUN chmod 777 test.sh
+RUN test.sh &
+
+ENTRYPOINT ["/bin/bash"]
+CMD ["test.sh"]
+
+ONBUILD RUN echo "on build excuted" >>onbuild.txt
